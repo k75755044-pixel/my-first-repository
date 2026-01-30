@@ -1,9 +1,12 @@
+
+
 from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
 
 from base.base_class import Base
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+
 
 
 class LoginPage(Base):
@@ -108,7 +111,6 @@ class LoginPage(Base):
 
 
     def click_calendar_buttons(self):
-        # self.scroll_to_element(self.get_calendar_button())     # прокрутка
         self.click_with_js(self.get_calendar_button())
         self.click_arrow()
         self.click_select_date()
